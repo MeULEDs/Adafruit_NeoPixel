@@ -677,8 +677,8 @@ void Adafruit_NeoPixel::show(void) {
 #elif defined(__arm__)
 
 #if defined(__MK20DX128__) || defined(__MK20DX256__) // Teensy 3.0 & 3.1
-#define CYCLES_800_T0H  (F_CPU / 2500000)
-#define CYCLES_800_T1H  (F_CPU / 1250000)
+#define CYCLES_800_T0H  (F_CPU / 4000000) // need to increase t0 to work with MeU WS2812 panel
+#define CYCLES_800_T1H  (F_CPU / 2000000) // need to increase t1 to work with MeU WS2812 panel
 #define CYCLES_800      (F_CPU /  800000)
 #define CYCLES_400_T0H  (F_CPU / 2000000)
 #define CYCLES_400_T1H  (F_CPU /  833333)
